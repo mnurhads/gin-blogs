@@ -14,7 +14,7 @@
 {{if .HasFooter}}
     <div id="home-footer">
         <a {{if .PageCode.HasPre}}href="{{.PageCode.PreLink}}" {{else}} class="disable" {{end}}>Previos</a>
-        <span>{{.PageCode.ShowPage}}页</span>
+        <span>{{.PageCode.ShowPage}}</span>
         <a {{if .PageCode.HasNext}}href="{{.PageCode.NextLink}}" {{else}} class="disable" {{end}}>Next</a>
     </div>
 {{end}}

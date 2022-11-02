@@ -39,9 +39,9 @@ func (this *RegisterController) Post() {
 	user := models.User{0, username, password, 0, time.Now().Unix()}
 	_, err := models.InsertUser(user)
 	if err != nil {
-		this.Data["json"] = map[string]interface{}{"code": 0, "message": "Register Success"}
+		this.Data["json"] = map[string]interface{}{"code": 0, "message": "Register Invalid"}
 	} else {
-		this.Data["json"] = map[string]interface{}{"code": 1, "message": "Register Invalid"}
+		this.Data["json"] = map[string]interface{}{"code": 1, "message": "Register Success"}
 	}
 	this.ServeJSON()
 
