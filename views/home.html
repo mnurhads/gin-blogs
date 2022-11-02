@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <title>Pengedit Text Berwarna | Mnurhadev</title>
     <link href="../static/css/blogsheet.css" rel="stylesheet">
 </head>
 <body>
@@ -13,9 +13,9 @@
 
 {{if .HasFooter}}
     <div id="home-footer">
-        <a {{if .PageCode.HasPre}}href="{{.PageCode.PreLink}}" {{else}} class="disable" {{end}}>上一页</a>
+        <a {{if .PageCode.HasPre}}href="{{.PageCode.PreLink}}" {{else}} class="disable" {{end}}>Previos</a>
         <span>{{.PageCode.ShowPage}}页</span>
-        <a {{if .PageCode.HasNext}}href="{{.PageCode.NextLink}}" {{else}} class="disable" {{end}}>下一页</a>
+        <a {{if .PageCode.HasNext}}href="{{.PageCode.NextLink}}" {{else}} class="disable" {{end}}>Next</a>
     </div>
 {{end}}
 

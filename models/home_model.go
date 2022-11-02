@@ -3,7 +3,7 @@ package models
 import (
 	"html/template"
 	"fmt"
-	"gin-blogs/utils"
+	_ "gin-blogs/utils"
 	"strconv"
 	"bytes"
 	"strings"
@@ -17,7 +17,7 @@ type HomeBlockParam struct {
 	Short      string
 	Content    string
 	Author     string
-	CreateTime string
+	//CreateTime string
 	Link string
 
 	UpdateLink string
@@ -51,7 +51,7 @@ func MakeHomeBlocks(articles []Article, isLogin bool) template.HTML {
 		homeParam.Short = art.Short
 		homeParam.Content = art.Content
 		homeParam.Author = art.Author
-		homeParam.CreateTime = utils.SwitchTimeStampToData(art.Createtime)
+		//homeParam.CreateTime = utils.SwitchTimeStampToData(art.Createtime)
 		homeParam.Link = "/article/" + strconv.Itoa(art.Id)
 		homeParam.UpdateLink = "/article/update?id=" + strconv.Itoa(art.Id)
 		homeParam.DeleteLink = "/article/delete?id=" + strconv.Itoa(art.Id)

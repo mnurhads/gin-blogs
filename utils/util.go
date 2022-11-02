@@ -11,6 +11,8 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"bytes"
 	"github.com/sourcegraph/syntaxhighlight"
+	"crypto/md5"
+    "encoding/hex"
 )
 
 var db *sql.DB
@@ -63,7 +65,6 @@ func CreateTableWithUser() {
 	ModifyDB(sql)
 }
 
-//创建文章表
 func CreateTableWithArticle() {
 	sql := `create table if not exists article(
 		id int(4) primary key auto_increment not null,
@@ -77,7 +78,6 @@ func CreateTableWithArticle() {
 	ModifyDB(sql)
 }
 
-//--------图片--------
 func CreateTableWithAlbum() {
 	sql := `create table if not exists album(
 		id int(4) primary key auto_increment not null,
@@ -96,6 +96,11 @@ func QueryRowDB(sql string) *sql.Row {
 func QueryDB(sql string) (*sql.Rows, error) {
 	return db.Query(sql)
 }
+
+func MD5(text string) string {
+	hash := md5.Sum([]byte(text))
+	return hex.EncodeToString(hash[:])
+ }
 
 func SwitchMarkdownToHtml(content string) template.HTML {
 

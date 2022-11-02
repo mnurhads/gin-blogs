@@ -4,7 +4,8 @@ import (
 	"github.com/astaxie/beego"
 	"gin-blogs/utils"
 	"fmt"
-	"github.com/matrix/go-matrix/log"
+	//"github.com/matrix/go-matrix/log"
+	_ "github.com/sirupsen/logrus"
 	"time"
 	"gin-blogs/models"
 )
@@ -22,7 +23,7 @@ func (this *RegisterController) Post() {
 	password := this.GetString("password")
 	repassword := this.GetString("repassword")
 	fmt.Println(username, password, repassword)
-	log.INFO(username, password, repassword)
+	//log.INFO(username, password, repassword)
 
 	id := models.QueryUserWithUsername(username)
 	fmt.Println("id:", id)

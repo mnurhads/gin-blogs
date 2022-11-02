@@ -1,7 +1,7 @@
 package models
 
 import (
-	"myblog/utils"
+	"gin-blogs/utils"
 	"fmt"
 )
 
