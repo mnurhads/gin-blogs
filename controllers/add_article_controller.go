@@ -12,7 +12,7 @@ type AddArticleController struct {
 
 func (this *AddArticleController) Get() {
 
-	this.TplName = "write_article.html"
+	this.TplName = "add_article.html"
 }
 
 func (this *AddArticleController) Post() {
@@ -23,7 +23,7 @@ func (this *AddArticleController) Post() {
 	content := this.GetString("content")
 	fmt.Printf("title:%s,tags:%s\n", title, tags)
 
-	art := models.Article{0, title, tags, short, content, "千锋教育", time.Now().Unix()}
+	art := models.Article{0, title, tags, short, content, "testing", time.Now().Unix()}
 	_, err := models.AddArticle(art)
 
 	var response map[string]interface{}

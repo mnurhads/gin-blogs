@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Title}}</title>
+    <link href="../static/css/blogsheet.css" rel="stylesheet">
+</head>
+<body>
+ 
+{{template "block/nav.html" .}}
+
+<div id="main">
+    <form id="write-art-form" method="post">
+        <div>Judul</div>
+        <input type="text" placeholder="Masukkan Judul" name="title">
+        <div>Label</div>
+        <input type="text" placeholder="Masukkan Label" name="tags">
+        <div>Profil</div>
+        <textarea placeholder="Masukkan Profil" name="short"> </textarea>
+        <div>Atikel</div>
+        <textarea id="content" placeholder="Artikel" name="content"></textarea>
+        <button type="button" onclick="history.back()">Kembali</button>
+        <button type="submit" id="write-art-submit">Simpan DAta</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -16,5 +16,4 @@ func (this *AlbumController) Get() {
 	}
 	this.Data["Album"] = albums
 	this.TplName = "album.html"
-	//this.TplName = "album.html"
 }
