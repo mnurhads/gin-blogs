@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Pengedit Text Berwarna | Mnurhadev</title>
-    <link href="../static/css/blogsheet.css" rel="stylesheet">
+<title>My blog WIth Golang</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="../static/asset/style.css" rel="stylesheet" type="text/css" />
+<!-- Old -->
+<link href="../static/css/blogsheet.css" rel="stylesheet">
+<!-- End Old -->
+
+<script type="text/javascript" src="../static/asset/js/cufon-yui.js"></script>
+<script type="text/javascript" src="../static/asset/js/arial.js"></script>
+<script type="text/javascript" src="../static/asset/js/cuf_run.js"></script>
 </head>
 <body>
+<div id="main" class="main">
 {{template "block/nav.html" .}}
-
-<div id="main">
 {{.Content}}
 
 {{if .HasFooter}}
@@ -18,9 +24,7 @@
         <a {{if .PageCode.HasNext}}href="{{.PageCode.NextLink}}" {{else}} class="disable" {{end}}>Next</a>
     </div>
 {{end}}
-
-
+{{template "block/footer.html"}}
 </div>
-
 </body>
 </html>

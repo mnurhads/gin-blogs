@@ -24,9 +24,9 @@ func (this *LoginController) Post() {
 	fmt.Println("id:", id)
 	if id > 0 {
 		this.SetSession("loginuser", username)
-		this.Data["json"] = map[string]interface{}{"code": 1, "message": " Login Success"}
+		this.Data["json"] = map[string]interface{}{"code": 1, "message": "Login Success"}
 	} else {
-		this.Data["json"] = map[string]interface{}{"code": 0, "message": " Login Invalid"}
+		this.Data["json"] = map[string]interface{}{"code": 0, "message": "Login Invalid"}
 	}
 	this.ServeJSON()
 }

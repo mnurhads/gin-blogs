@@ -1,32 +1,41 @@
-<div id="nav">
-    <div id="nav-write-article">
-        <ul>
-        {{if .IsLogin}}
-            <li><a href="/article/add">Tambah Artikel</a></li>
-        {{end}}
-        </ul>
+<div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <h1><a href="index.html"><small>put your slogan here</small><span>Aurora</span>Desktop</a></h1>
+      </div>
+      <div class="searchform">
+        <form id="formsearch" name="formsearch" method="post" action="#">
+          <input name="button_search" src="../static/asset/images/search_btn.gif" class="button_search" type="image" />
+          <span>
+          <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" value="Search" type="text" />
+          </span>
+        </form>
+      </div>
+      <div class="clr"></div>
     </div>
-
-
-    <div id="nav-menu">
+</div>
+<div class="hbg">
+    <div class="hbg_resize">
+      <div class="nav_menu">
         <ul>
-            <li><a href="/">Beranda</a></li>
-            <li><a href="/tags">Post Tag</a></li>
-            <li><a href="/album">Portofolio</a></li>
-            <li><a href="/aboutme">Tentang Saya</a></li>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+           {{if .IsLogin}}
+                <li><a href='javascript:if(confirm("logout？")){location="/exit"}'>Logout</a></li>
+           {{else}}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            {{end}}
         </ul>
+      </div>
+      <img src="../static/asset/images/hbg_img.jpg" width="446" height="241" alt="" class="hbgimg" />
+      <div class="hbg_r">
+        <h2>Read me first...</h2>
+        <p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac magna a turpis ornare aliquam id hendrerit nisl. Pellentesque adipiscing blandit mollis. Curabitur varius est et sem rhoncus et pretium massa molestie.<br />
+          Vestibulum mattis justo ultricies mauris fringilla rutrum. Vestibulum id mauris non lorem euismod posuere. Etiam bibendum, sapien id.</strong></p>
+        <a href="#"><img src="../static/asset/images/readmore.jpg" width="156" height="49" alt="" border="0" /></a> </div>
     </div>
-
-
-    <div id="nav-login">
-        <ul>
-        {{if .IsLogin}}
-            <li><a href='javascript:if(confirm("logout？")){location="/exit"}'>Logout</a></li>
-        {{else}}
-            <li><a href="/login">Login</a></li>
-            <li><a href="/register">Register</a></li>
-        {{end}}
-        </ul>
-    </div>
-
 </div>
