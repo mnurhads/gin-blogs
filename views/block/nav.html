@@ -1,7 +1,6 @@
 <div id="nav">
     <div id="nav-write-article">
         <ul>
-        {{/*如果已经登录，才会显示"写博客"*/}}
         {{if .IsLogin}}
             <li><a href="/article/add">Tambah Artikel</a></li>
         {{end}}
